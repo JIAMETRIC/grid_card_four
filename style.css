@@ -1,0 +1,144 @@
+/* :::Default code Starts Here::: */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid #bbff00; */
+}
+
+body {
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/dark2.png);
+  /* overflow: hidden; */
+}
+
+main {
+  background-color: aquamarine;
+  /* height: 100%; */
+  /* width: 100%; */
+}
+
+
+:root {
+  --primary-color: #2e2bd3;
+  --secondary-color: #2ba3d3;
+  --third-color: #fcceeb;
+  --sub-heading-font: 24px;
+  --main-font-size: 18px;
+  --main-font-family: 'Open Sans', sans-serif;
+  --second-font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.align {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+/* :::Default code Ends Here::: */
+
+
+
+/* :::Project code::: */
+
+.card {
+  display: grid;
+  /* grid-template-columns: 250px; */
+  grid-template-rows: 180px 180px 60px;
+  grid-template-areas: "image" "text" "stats";
+
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-image {
+  grid-area: image;
+  background: url("./images/inhaler.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-text span,
+h2,
+p {
+  padding: 5px 0;
+}
+
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size: 13px;
+}
+
+.card-text p {
+  color: grey;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 25px;
+}
+
+.card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+
+.card-stats .type {
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card-stats .value {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-stats .border {
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26, 87);
+}
+
+.card-stats .value sup {
+  font-size: 10px;
+}
